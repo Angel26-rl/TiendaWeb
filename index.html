@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Tienda Online</h1>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="producto">
+            <img src="https://cdn.kemik.gt/2026/03/71dnC10L56L.-700x700.jpg"
+     alt="Mochila Solar">
+
+<h2>Mochila Solar para Laptop 15.6"</h2>
+
+<p class="precio">Q Q 1,264</p>
+
+            <button onclick="mostrarFormulario()">
+                Comprar
+            </button>
+        </section>
+
+        <section id="formularioCompra" class="oculto">
+
+            <h2>Finalizar Compra</h2>
+
+            <input type="text" placeholder="Usuario">
+
+            <input type="password" placeholder="Contraseña">
+
+            <input type="text" placeholder="Dirección de envío">
+
+            <input type="text" placeholder="Número de tarjeta ficticio">
+
+            <button onclick="confirmarCompra()">
+                Pagar
+            </button>
+
+        </section>
+
+        <section id="mensaje" class="oculto">
+            <h2>
+                Compra confirmada ✅
+            </h2>
+
+            <p>
+                Tu pedido llegará en 2 a 3 días hábiles.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
