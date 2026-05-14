@@ -51,6 +51,7 @@ main{
     line-height: 1.6;
 }
 
+
 button{
     background-color: #007bff;
     color: white;
@@ -92,4 +93,80 @@ input{
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
     text-align: center;
+}
+.inicio{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.inicio-contenido{
+    max-width: 800px;
+    margin: auto;
+}
+
+.inicio h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.inicio p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.imagen-inicio{
+    width: 300px;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px black;
+}
+
+.imagen-inicio:hover{
+    transform: scale(1.05);
+}
+.modo-btn{
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+.oscuro{
+    background-color: #121212;
+    color: white;
+}
+
+.oscuro .producto,
+.oscuro #formularioCompra,
+.oscuro #mensaje{
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.oscuro input{
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+.contacto{
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+.robot{
+    width: 220px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 0px 15px cyan);
+}
+
+.contacto h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.contacto p{
+    font-size: 20px;
+    margin-top: 15px;
 }

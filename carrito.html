@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Finalizar Compra</h1>
+    </header>
+
+    <main>
+
+        <section class="producto">
+
+            <img src="mochila.jpg" alt="Mochila">
+
+            <h2>Mochila Solar Inteligente</h2>
+
+            <p class="precio">Q 1000</p>
+
+        </section>
+
+        <section id="formularioCompra">
+
+            <h2>Datos de Compra</h2>
+
+            <input type="text" placeholder="Usuario">
+
+            <input type="password" placeholder="Contraseña">
+
+            <input type="text" placeholder="Dirección de envío">
+
+            <input type="text" placeholder="Número de tarjeta ficticio">
+
+            <button onclick="confirmarCompra()">
+                Pagar
+            </button>
+
+        </section>
+
+        <section id="mensaje" class="oculto">
+
+            <h2>
+                Compra confirmada ✅
+            </h2>
+
+            <p>
+                Tu pedido llegará en 2 a 3 días hábiles.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

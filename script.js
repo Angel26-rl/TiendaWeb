@@ -1,10 +1,3 @@
-function mostrarFormulario(){
-
-    document.getElementById("formularioCompra")
-    .classList.remove("oculto");
-
-}
-
 function confirmarCompra(){
 
     document.getElementById("formularioCompra")
@@ -13,6 +6,10 @@ function confirmarCompra(){
     document.getElementById("mensaje")
     .classList.remove("oculto");
 
-} 
+}
 
+function cambiarModo(){
 
+    document.body.classList.toggle("oscuro");
+
+}

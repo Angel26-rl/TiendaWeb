@@ -13,15 +13,40 @@
         <h1>Mi Tienda Online</h1>
 
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Productos</a>
-            <a href="#">Contacto</a>
+            <button onclick="cambiarModo()" class="modo-btn">
+    🌙 Cambiar modo
+</button>
+           <a href="#inicio">Inicio</a>
+            <a href="#producto">Productos</a>
+           <a href="contacto.html">Contacto</a>
         </nav>
     </header>
 
     <main>
+        <section id="inicio" class="inicio">
 
-        <section class="producto">
+    <div class="inicio-contenido">
+
+        <h2>
+            Tecnología para tu día a día
+        </h2>
+
+        <p>
+            Descubre la nueva mochila solar inteligente con seguridad avanzada,
+            carga USB y diseño premium.
+        </p>
+
+        <a href="#producto">
+            <img src="mochila.jpg"
+                 alt="Mochila Inteligente"
+                 class="imagen-inicio">
+        </a>
+
+    </div>
+
+</section>
+
+       <section id="producto" class="producto">
             <img src="https://cdn.kemik.gt/2026/03/71dnC10L56L.-700x700.jpg"
      alt="Mochila Solar">
 
@@ -40,28 +65,14 @@ Fabricada con materiales impermeables y resistentes a golpes, protege tus perten
 También incorpora candado TSA y diseño aprobado para viajes en avión, ofreciendo practicidad, estilo y seguridad en todo momento.
 </p>
 
-            <button onclick="mostrarFormulario()">
-                Comprar
-            </button>
+           <a href="carrito.html">
+    <button>
+        Comprar
+    </button>
+</a>
         </section>
 
-        <section id="formularioCompra" class="oculto">
-
-            <h2>Finalizar Compra</h2>
-
-            <input type="text" placeholder="Usuario">
-
-            <input type="password" placeholder="Contraseña">
-
-            <input type="text" placeholder="Dirección de envío">
-
-            <input type="text" placeholder="Número de tarjeta ficticio">
-
-            <button onclick="confirmarCompra()">
-                Pagar
-            </button>
-
-        </section>
+        
 
         <section id="mensaje" class="oculto">
             <h2>
