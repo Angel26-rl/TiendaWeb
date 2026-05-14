@@ -43,6 +43,14 @@ main{
     color: green;
 }
 
+.descripcion{
+    text-align: justify;
+    font-size: 14px;
+    color: #444;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
 button{
     background-color: #007bff;
     color: white;
