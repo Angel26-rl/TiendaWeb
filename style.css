@@ -57,12 +57,14 @@ button{
     color: white;
     border: none;
     padding: 12px;
-    width: 100%;
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
-
+.producto button,
+#formularioCompra button{
+    width: 100%;
+}
 button:hover{
     background-color: #0056b3;
 }
