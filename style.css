@@ -181,8 +181,8 @@ input{
 
 .catalogo{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
     padding: 30px;
 }
 
@@ -201,8 +201,9 @@ input{
 
 .producto img{
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: contain;
+    border-radius: 10px;
 }
 
 .best-seller{
