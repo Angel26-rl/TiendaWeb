@@ -2,11 +2,12 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 actualizarContador();
 
-function agregarCarrito(nombre, precio){
+function agregarCarrito(nombre, precio, imagen){
 
     carrito.push({
         nombre: nombre,
-        precio: precio
+        precio: precio,
+        imagen: imagen
     });
 
     localStorage.setItem(
@@ -52,6 +53,9 @@ function mostrarCarrito(){
         contenedor.innerHTML += `
             <div class="item-carrito">
 
+                <img src="${producto.imagen}"
+                class="imagen-carrito">
+
                 <h3>${producto.nombre}</h3>
 
                 <p>Q ${producto.precio}</p>
@@ -72,6 +76,11 @@ function mostrarCarrito(){
 
 }
 
+    document.getElementById("total")
+    .innerText = "Total: Q " + total;
+
+
+
 function eliminarProducto(index){
 
     carrito.splice(index, 1);
@@ -88,6 +97,83 @@ function eliminarProducto(index){
 }
 
 function confirmarCompra(){
+
+    let nombre =
+    document.getElementById("nombreCliente").value;
+
+    let direccion =
+    document.getElementById("direccionCliente").value;
+
+    let facturaHTML = "";
+
+    let total = 0;
+
+    carrito.forEach(producto => {
+
+        facturaHTML += `
+            <p>
+                ${producto.nombre}
+                ........
+                Q ${producto.precio}
+            </p>
+        `;
+
+        total += producto.precio;
+
+    });
+
+    let fecha =
+    new Date().toLocaleDateString();
+
+    document.getElementById("factura")
+    .innerHTML = `
+
+        <div class="factura-box">
+
+            <h2>
+                TECHLIFE STORE
+            </h2>
+
+            <p>
+                -------------------------
+            </p>
+
+            <p>
+                Cliente:
+                ${nombre}
+            </p>
+
+            <p>
+                Dirección:
+                ${direccion}
+            </p>
+
+            <p>
+                Fecha:
+                ${fecha}
+            </p>
+
+            <p>
+                -------------------------
+            </p>
+
+            ${facturaHTML}
+
+            <p>
+                -------------------------
+            </p>
+
+            <h3>
+                TOTAL: Q ${total}
+            </h3>
+
+            <p>
+                ¡Gracias por su compra!
+            </p>
+
+        </div>
+
+    `;
 
     document.getElementById("formularioCompra")
     .classList.add("oculto");

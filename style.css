@@ -283,3 +283,52 @@ footer{
     }
 
 }
+/* FACTURA */
+
+.factura-box{
+
+    background-color: white;
+
+    width: 350px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    font-family: monospace;
+
+    text-align: left;
+
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+
+    color: black;
+
+}
+
+.factura-box h2,
+.factura-box h3{
+
+    text-align: center;
+
+}
+
+.factura-box p{
+
+    margin: 8px 0;
+
+}
+.imagen-carrito{
+
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 15px;
+
+}
