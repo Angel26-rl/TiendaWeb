@@ -1,5 +1,7 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+actualizarContador();
+
 function agregarCarrito(nombre, precio){
 
     carrito.push({
@@ -12,7 +14,23 @@ function agregarCarrito(nombre, precio){
         JSON.stringify(carrito)
     );
 
+    actualizarContador();
+
     alert(nombre + " agregado al carrito");
+
+}
+
+function actualizarContador(){
+
+    let contador =
+    document.getElementById("contador-carrito");
+
+    if(contador){
+
+        contador.innerText =
+        "🛒 Carrito (" + carrito.length + ")";
+
+    }
 
 }
 
@@ -29,12 +47,19 @@ function mostrarCarrito(){
 
     contenedor.innerHTML = "";
 
-    carrito.forEach(producto => {
+    carrito.forEach((producto, index) => {
 
         contenedor.innerHTML += `
             <div class="item-carrito">
+
                 <h3>${producto.nombre}</h3>
+
                 <p>Q ${producto.precio}</p>
+
+                <button onclick="eliminarProducto(${index})">
+                    Eliminar
+                </button>
+
             </div>
         `;
 
@@ -47,6 +72,21 @@ function mostrarCarrito(){
 
 }
 
+function eliminarProducto(index){
+
+    carrito.splice(index, 1);
+
+    localStorage.setItem(
+        "carrito",
+        JSON.stringify(carrito)
+    );
+
+    mostrarCarrito();
+
+    actualizarContador();
+
+}
+
 function confirmarCompra(){
 
     document.getElementById("formularioCompra")
@@ -56,6 +96,10 @@ function confirmarCompra(){
     .classList.remove("oculto");
 
     localStorage.removeItem("carrito");
+
+    carrito = [];
+
+    actualizarContador();
 
 }
 
