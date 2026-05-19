@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
+
+<body onload="mostrarCarrito()">
 
     <header>
-        <h1>Finalizar Compra</h1>
+
+        <h1>Carrito de Compras</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+        </nav>
+
     </header>
 
     <main>
 
-        <section class="producto">
-
-            <img src="mochila.jpg" alt="Mochila">
-
-            <h2>Mochila Solar Inteligente</h2>
-
-            <p class="precio">Q 1,264</p>
+        <section id="carrito-items">
 
         </section>
 
+        <h2 id="total"></h2>
+
         <section id="formularioCompra">
 
-            <h2>Datos de Compra</h2>
+            <h2>Finalizar Compra</h2>
 
-            <input type="text" placeholder="Usuario">
+            <input type="text"
+            placeholder="Usuario">
 
-            <input type="password" placeholder="Contraseña">
+            <input type="password"
+            placeholder="Contraseña">
 
-            <input type="text" placeholder="Dirección de envío">
+            <input type="text"
+            placeholder="Dirección de envío">
 
-            <input type="text" placeholder="Número de tarjeta ficticio">
+            <input type="text"
+            placeholder="Tarjeta ficticia">
 
             <button onclick="confirmarCompra()">
                 Pagar
@@ -43,14 +56,16 @@
 
         </section>
 
-        <section id="mensaje" class="oculto">
+        <section id="mensaje"
+        class="oculto">
 
             <h2>
                 Compra confirmada ✅
             </h2>
 
             <p>
-                Tu pedido llegará en 2 a 3 días hábiles.
+                Tu pedido llegará
+                en 2 a 3 días hábiles.
             </p>
 
         </section>
