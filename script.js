@@ -131,7 +131,7 @@ function confirmarCompra(){
         <div class="factura-box">
 
             <h2>
-                TECHLIFE STORE
+                VELTRIX STORE
             </h2>
 
             <p>
